@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase.js';
 import { Route } from 'react-router-dom';
 
@@ -19,4 +20,9 @@ class App extends Component {
 	}
 }
 
-export default App;
+function mapStateToProps (state) {
+	console.log ('state', state);
+	return {}
+}
+
+export default connect(mapStateToProps, null)(App);
