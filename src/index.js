@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { browserHistory, Router } from 'react-router';
 import { firebaseApp } from './firebase.js';
 
 import App from './components/App.jsx';
@@ -18,11 +19,11 @@ firebaseApp.auth().onAuthStateChanged(user => {
 
 ReactDOM.render (
 		<BrowserRouter>
-			<div>
+		<div>
 				<Route path = "/app" component = {App} />
 				<Route path = "/signin" component = {SignIn} />
 				<Route path = "/signup" component = {SignUp} />
-			</div>
+		</div>
 		</BrowserRouter>,
 		document.getElementById ('root')
 	);

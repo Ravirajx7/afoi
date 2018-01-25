@@ -22,7 +22,7 @@ class SignIn extends Component {
 		firebaseApp.auth().signInWithEmailAndPassword(email,password)
 		.catch (error => {
 			console.log ('error', error);
-			this.setState({error})
+			this.setState({error});
 		})
 	}
 
