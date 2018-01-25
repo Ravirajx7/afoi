@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { firebaseApp } from '../firebase.js';
 import './App.css';
 
@@ -37,6 +38,10 @@ class SignUp extends Component {
 				<div>
 					{this.state.error.message}
 				</div>
+				<div>
+					Already a User?
+				</div>
+				<div><Link to={'/signin'}>Sign In Instead</Link></div>
 			</div>
 		)
 	}
