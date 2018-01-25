@@ -10,3 +10,12 @@ const config = {
  };
 
 export const firebaseApp = firebase.initializeApp (config);
+
+firebase.database().ref().set ({
+	appName : 'AFOI App',
+	isRunning : true,
+	user : {
+		name : 'Shashank',
+		age : 19
+	}
+});

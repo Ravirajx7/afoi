@@ -17,6 +17,9 @@ class App extends Component {
 
 	search () {
 		console.log ('this.state', this.state);
+		const BASE_URL = 'https://api.spotify.com/v1/search?';
+		const FETCH_URL = `${BASE_URL}q=${this.state.query}&type=artist&limit=1`;
+		console.log ('FETCH_URL', FETCH_URL);
 	}
 
 	signOut () {
@@ -39,7 +42,12 @@ class App extends Component {
 					</nav>
 					<FormGroup className="MySearch">
 						<InputGroup>
-							<FormControl type = "text" placeholder = "search footages by year" value={this.state.query} onChange={event => {this.setState({query : event.target.value})}} />
+							<FormControl type = "text" placeholder = "search footages by year" value={this.state.query} onChange={event => {this.setState({query : event.target.value})}}
+							onKeyPress={event => {
+								if (event.key == 'Enter') {
+									this.search ()
+								}
+							}} />
 							<button onClick = {() => this.search()}>Search</button>
 						</InputGroup>
 					</FormGroup>
