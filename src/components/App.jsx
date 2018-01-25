@@ -3,16 +3,29 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase.js';
 import { Route, Link } from 'react-router-dom';
+import { FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
+
+	constructor (props) {
+		super (props);
+		this.state = {
+			query : ''
+		}
+	}
+
+	search () {
+		console.log ('this.state', this.state);
+	}
+
 	signOut () {
 		firebaseApp.auth().signOut();
 	}
 	render () {
 		return (
 			<div className ="">
-			<h1 className = "header">Archival Footages of India Application</h1><br />
+			<h1 className = "header">Archival Footages of India</h1><br />
 				<div>
 					<nav>
 						<ul className = "topnav">
@@ -24,10 +37,13 @@ class App extends Component {
 							<li className="topnav-right"><b>Sign Out</b></li>
 						</ul>
 					</nav>
+					<FormGroup className="MySearch">
+						<InputGroup>
+							<FormControl type = "text" placeholder = "search footages by year" value={this.state.query} onChange={event => {this.setState({query : event.target.value})}} />
+							<button onClick = {() => this.search()}>Search</button>
+						</InputGroup>
+					</FormGroup>
 				</div>
-				<button className = "butt" onClick = {() => this.signOut()} >
-					Sign Out
-				</button>
 			</div>
 		);
 	}

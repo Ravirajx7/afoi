@@ -50,6 +50,7 @@ nav ul {
 
 nav ul li {
 	list-style: none;
+	font-size: 20px;
 }
 
 ul.topnav li {
@@ -72,5 +73,10 @@ ul.topnav li{
 
 ul.topnav li b:hover {
 	background-color: #0080ff;
+}
+
+.MySearch {
+	text-align: center;
+	font-size: 50px;
 }
 
