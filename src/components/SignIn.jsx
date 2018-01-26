@@ -33,7 +33,7 @@ class SignIn extends Component {
 				<div className = "FormGroup">
 					<input className = "FormControl" type = "text" placeholder = "email" onChange = {event => this.setState ({email : event.target.value})} /><br />
 					<input className = "FormControl" type = "password" placeholder = "password" onChange = {event => this.setState ({password : event.target.value})} /><br />
-					<button className = "butt" type = "Button" onClick = {() => this.signIn()}>SignIn</button>
+					<button className = "butt" type = "button" onClick = {() => this.signIn()}>SignIn</button>
 				</div>
 				<div>
 					{this.state.error.message}
