@@ -32,12 +32,12 @@ class App extends Component {
 				<div>
 					<nav>
 						<ul className = "topnav">
-							<li><b><Link to='/app'>Home</Link></b></li>
-							<li><b>News</b></li>
+							<li><b><Link to='./app'>Home</Link></b></li>
+							<li><b><Link to='./news'>News</Link></b></li>
 							<li><b><Link to='./About'>About</Link></b></li>
-							<li><b>Contact</b></li>
+							<li><b><Link to='./contact'>Contact</Link></b></li>
 							<li className="topnav-right"><b><Link to='/signin'>Sign In</Link></b></li>
-							<li className="topnav-right"><b>Sign Out</b></li>
+							<li className="topnav-right"><b><Link to="/signout">Sign Out</Link></b></li>
 						</ul>
 					</nav>
 					<FormGroup className="MySearch">

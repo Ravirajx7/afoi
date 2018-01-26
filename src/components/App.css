@@ -72,7 +72,8 @@ ul.topnav li{
 }
 
 ul.topnav li b:hover {
-	background-color: #0080ff;
+	background-color: grey;
+	border-radius: 4px;
 }
 
 .MySearch {

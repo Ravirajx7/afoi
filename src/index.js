@@ -12,6 +12,9 @@ import App from './components/App.jsx';
 import SignIn from './components/SignIn.jsx';
 import SignUp from './components/SignUp.jsx';
 import About from './components/About.jsx';
+import News from './components/News.jsx';
+import Contact from './components/Contact.jsx';
+import SignOut from './components/SignOut.jsx';
 
 const store = createStore (reducer);
 
@@ -33,6 +36,9 @@ ReactDOM.render (
 				<Route path = "/signin" component = {SignIn} />
 				<Route path = "/signup" component = {SignUp} />
 				<Route path = "/about" component = {About} />
+				<Route path = "/news" component = {News} />
+				<Route path = "/contact" component = {Contact} />
+				<Route path = "/signout" component = {SignOut} />
 		</div>
 		</BrowserRouter>
 	</Provider>,
