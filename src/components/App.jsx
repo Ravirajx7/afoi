@@ -48,7 +48,9 @@ class App extends Component {
 									this.search ()
 								}
 							}} />
-							<button onClick = {() => this.search()}>Search</button>
+							<button onClick = {() => this.search()}>Search</button><br /><br /><br /><br />
+							<button onClick = { () => this.signOut ()}>Signout</button>
+
 						</InputGroup>
 					</FormGroup>
 				</div>
@@ -63,3 +65,4 @@ function mapStateToProps (state) {
 }
 
 export default connect(mapStateToProps, null)(App);
+	
